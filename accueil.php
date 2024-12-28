@@ -12,8 +12,7 @@ $role = $_SESSION['role'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des stages</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Stage BTS</title>
     <style>
         body {
             margin: 0;
@@ -34,7 +33,13 @@ $role = $_SESSION['role'];
             text-decoration: none;
             font-size: 18px;
             color: white;
-            display: block;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar a img.icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
         .sidebar a:hover {
             background-color: #575757;
@@ -42,9 +47,6 @@ $role = $_SESSION['role'];
         .sidebar a.active {
             background-color: #007bff;
             color: white;
-        }
-        .sidebar a i {
-            margin-right: 10px;
         }
         .content {
             margin-left: 200px;
@@ -108,33 +110,39 @@ $role = $_SESSION['role'];
 </head>
 <body>
     <div class="sidebar">
-        <a href="#" class="active"><i class="fas fa-home"></i> Accueil</a>
-        <a href="#"><i class="fas fa-building"></i> Entreprise</a>
-        <a href="#"><i class="fas fa-user"></i> Stagiaire</a>
-        <a href="#"><i class="fas fa-handshake"></i> Inscription</a>
-        <a href="#"><i class="fas fa-question-circle"></i> Aide</a>
-        <a href="#"><i class="fas fa-sign-out-alt"></i> Deconnection</a>
+        <a href="#" class="active">
+            <img src="icons/home.png" alt="Accueil" class="icon"> Accueil
+        </a>
+        <a href="#">
+            <img src="icons/entreprise.png" alt="Entreprise" class="icon"> Entreprise
+        </a>
+        <a href="#">
+            <img src="icons/stage.png" alt="Stagiaire" class="icon"> Stagiaire
+        </a>
+        <a href="#">
+            <img src="icons/inscrire.png" alt="Inscription" class="icon"> Inscription
+        </a>
+        <a href="#">
+            <img src="icons/aide.png" alt="Aide" class="icon"> Aide
+        </a>
+        <a href="#">
+            <img src="icons/deconnexion.png" alt="Deconnection" class="icon"> Deconnection
+        </a>
         
         <div class="mt-auto">
-            <a href="#"><i class="fas fa-arrow-right"></i> Développer</a>
-            <a href="#"><i class="fas fa-arrow-left"></i> Réduire</a>
+            <a href="#">
+                <img src="icons/droite.png" alt="Développer" class="icon"> Développer
+            </a>
+            <a href="#">
+                <img src="icons/gauche.png" alt="Réduire" class="icon"> Réduire
+            </a>
         </div>
     </div>
-
     <div class="content">
         <div class="header">Stage BTS</div>
         <div class="subheader">Bienvenue sur la page de gestion des stages </div>
-        <div class="line"></div>
-        
+        <div class="line"></di>
     </div>
 
-    <script>
-        document.querySelectorAll('.sidebar a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelectorAll('.sidebar a').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
