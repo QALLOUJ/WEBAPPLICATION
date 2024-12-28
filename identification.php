@@ -4,6 +4,7 @@ $host = 'localhost';
 $dbname = 'bdd_geststages'; 
 $username = 'root'; 
 $password = ''; 
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -14,28 +15,21 @@ try {
         $password = $_POST['password']; 
         $role = $_POST['role']; 
 
-        
         if ($role == 'etudiant') {
             $table = 'etudiant';
         } elseif ($role == 'professeur') {
             $table = 'professeur';
         }
 
-        
         $sql = "SELECT * FROM $table WHERE login = :login AND mdp = :mdp";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['login' => $login, 'mdp' => $password]);
 
-        
         if ($stmt->rowCount() > 0) {
-            
             $user = $stmt->fetch();
-
-            
             $_SESSION['login'] = $user['login'];
             $_SESSION['role'] = $role; 
             
-          
             header("Location: accueil.php"); 
             exit();
         } else {
@@ -44,7 +38,6 @@ try {
     }
 
 } catch (PDOException $e) {
-    
     die("Erreur : la connexion à la base de données a échoué. " . $e->getMessage());
 }
 ?>
@@ -53,7 +46,6 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des stages</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -74,7 +66,13 @@ try {
             text-decoration: none;
             font-size: 18px;
             color: white;
-            display: block;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar a img.icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
         .sidebar a:hover {
             background-color: #575757;
@@ -82,9 +80,6 @@ try {
         .sidebar a.active {
             background-color: #007bff;
             color: white;
-        }
-        .sidebar a i {
-            margin-right: 10px;
         }
         .content {
             margin-left: 200px;
@@ -148,15 +143,29 @@ try {
 </head>
 <body>
     <div class="sidebar">
-        <a href="#" class="active"><i class="fas fa-home"></i> Accueil</a>
-        <a href="#"><i class="fas fa-building"></i> Entreprise</a>
-        <a href="#"><i class="fas fa-user"></i> Stagiaire</a>
-        <a href="#"><i class="fas fa-handshake"></i> Inscription</a>
-        <a href="#"><i class="fas fa-question-circle"></i> Aide</a>
+        <a href="#" class="active">
+            <img src="icons/home.png" alt="Accueil" class="icon"> Accueil
+        </a>
+        <a href="#">
+            <img src="icons/entreprise.png" alt="Entreprise" class="icon"> Entreprise
+        </a>
+        <a href="#">
+            <img src="icons/stage.png" alt="Stagiaire" class="icon"> Stagiaire
+        </a>
+        <a href="#">
+            <img src="icons/inscrire.png" alt="Inscription" class="icon"> Inscription
+        </a>
+        <a href="#">
+            <img src="icons/aide.png" alt="Aide" class="icon"> Aide
+        </a>
         
         <div class="mt-auto">
-            <a href="#"><i class="fas fa-arrow-right"></i> Développer</a>
-            <a href="#"><i class="fas fa-arrow-left"></i> Réduire</a>
+            <a href="#">
+                <img src="icons/droite.png" alt="Développer" class="icon"> Développer
+            </a>
+            <a href="#">
+                <img src="icons/gauche.png" alt="Réduire" class="icon"> Réduire
+            </a>
         </div>
     </div>
     <div class="content">
@@ -178,13 +187,5 @@ try {
             </form>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.sidebar a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelectorAll('.sidebar a').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
