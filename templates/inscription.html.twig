@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}  
+
+    {% if message %}
+        <div class="aide">{{ message }}</div>
+        {% set message = null %}
+    {% endif %}
+
+    {% if error %}
+        <div class="informaton">{{ error }}</div>
+        {% set error = null %}
+    {% endif %}
+
+    <form method="POST" action="inscription_form.php">
+        <table class="list">
+            <tr>
+                <th class="list" colspan="2">Contact</th>
+            </tr>
+            <tr>
+                <td>Entreprise<span style="color: red;">*</span> :</td>
+                <td>
+                    <select name="entreprise" id="entreprise" required>
+                        <option value="" disabled selected>Choisir une entreprise</option>
+                        {% for entreprise in entreprises %}
+                            <option value="{{ entreprise.num_entreprise }}">{{ entreprise.raison_sociale }} - Contact : {{ entreprise.nom_contact }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Étudiant<span style="color: red;">*</span> :</td>
+                <td>
+                    <select name="etudiant" id="etudiant" required>
+                        <option value="" disabled selected>Choisir un étudiant</option>
+                        {% for etudiant in etudiants %}
+                            <option value="{{ etudiant.num_etudiant }}">{{ etudiant.prenom_etudiant }} {{ etudiant.nom_etudiant }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Professeur<span style="color: red;">*</span> :</td>
+                <td>
+                    <select name="professeur" id="professeur" required>
+                        <option value="" disabled selected>Choisir un professeur</option>
+                        {% for professeur in professeurs %}
+                            <option value="{{ professeur.num_professeur }}">{{ professeur.prenom_prof }} {{ professeur.nom_prof }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <p></p>
+
+        <table class="list">
+            <tr>
+                <th class="list" colspan="2">Description du stage</th>
+            </tr>
+            <tr>
+                <td>Date de début du stage<span style="color: red;">*</span> :</td>
+                <td>
+                    <input type="date" id="debut_stage" name="debut_stage" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Date de fin du stage<span style="color: red;">*</span> :</td>
+                <td>
+                    <input type="date" id="fin_stage" name="fin_stage" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Type de stage<span style="color: red;">*</span> :</td>
+                <td>
+                    <select name="type_stage" id="type_stage" required>
+                        <option value="" disabled selected>Choisir un type de stage</option>
+                        {% for stage in typesStage %}
+                            <option value="{{ stage }}">{{ stage }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Description du projet :</td>
+                <td>
+                    <textarea id="desc_projet" name="desc_projet" rows="5" cols="30" placeholder="Écrivez votre texte ici..."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Observation :</td>
+                <td>
+                    <textarea id="observation" name="observation" rows="5" cols="30" placeholder="Écrivez votre texte ici..."></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <p class="aide">Les champs comportant le symbole <span style="color: red;">*</span> sont obligatoires.</p>
+
+        <button class="large_bouton_operation" type="submit">Inscrire</button>
+
+    </form>
+
+{% endblock %}

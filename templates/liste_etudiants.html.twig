@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}  
+
+<button class="large_bouton_operation" onclick="toggleForm()">
+    <a>
+        <img src="icons/rechercher.png" height = "20" weight = "20">
+        Rechercher un stagiaire existant
+    </a>
+</button>
+
+{% if role == 'professeur' %}
+<button class="large_bouton_operation">
+    <a>
+        <img src="icons/ajouter.png" height = "20" weight = "20">
+        Ajouter un étudiant
+    </a>
+</button>
+{% endif %}
+
+<div id="searchForm" style="display: none;">
+
+<form method="POST" action="recherche_etudiant.php">
+    <label for="nom_etudiant">Nom :</label>
+    <input type="text" id="nom_etudiant" name="nom_etudiant" value="{{ nom_etudiant }}">
+    
+    <label for="prenom_etudiant">Prénom :</label>
+    <input type="text" id="prenom_etudiant" name="prenom_etudiant" value="{{ prenom_etudiant }}">
+    
+    <label for="num_etudiant">Numéro d'étudiant :</label>
+    <input type="text" id="num_etudiant" name="num_etudiant" value="{{ num_etudiant }}">
+    
+    <label for="classe">Classe :</label>
+    <input type="text" id="classe" name="classe" value="{{ classe }}">
+    
+    <button type="submit">Rechercher</button>
+</form>
+
+</div>
+
+
+<br> 
+<hr>
+<br>
+
+<table class= "list">
+    <tr>
+        <th class ="list">Opération</td>
+        {% if role == 'professeur' %}
+            <th class ="list">Opération</td>
+        {% endif %}
+        <th class ="list">Étudiant</td>
+        <th class ="list">Entreprises</td>
+        <th class ="list">Professeur</td>
+    </tr>
+
+    {% for ligne in result %}
+        <tr>
+            <td>
+                <a href="details.php?id={{ligne.num_stage}}" class = "fake_bouton">
+                    <img src="icons/voir.png" alt="Voir les informations sur le stagiaire" 
+                    width = "20" height ="20"  />
+                </a> 
+            </td>
+            {% if role == 'professeur' %}
+                <td>
+                    <a href="edit.php?id={{ligne.num_stage}}" class = "fake_bouton">
+                        <img src="icons/modifier.png" alt="Modifier les informations concernant le stagiaire " width = "20" height ="20" />
+                    </a> 
+                    <a href="delete.php?id={{ligne.num_stage}}" class = "fake_bouton">
+                        <img src="icons/supprimer.png" alt="Supprimer le stagiaire " width = "20" height ="20" />
+                    </a>
+                </td>
+            {% endif %}
+            <td>{{ ligne.prenom_etudiant }} {{ ligne.nom_etudiant }}</td>
+            <td>{{ ligne.raison_sociale }}</td>
+            <td>{{ ligne.prenom_prof }} {{ ligne.nom_prof }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<script>
+// Fonction JavaScript pour afficher/masquer le formulaire de recherche
+function toggleForm() {
+    var form = document.getElementById('searchForm');
+    if (form.style.display === "none") {
+        form.style.display = "block";  // Afficher le formulaire
+    } else {
+        form.style.display = "none";   // Masquer le formulaire
+    }
+}
+</script>
+
+
+{% endblock %} 

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}  
+<div class="header">Gestion des stages</div>
+<div class="subheader">Vous n'êtes pas connecté. Identifiez-vous pour poursuivre la navigation.</div>
+<div class="line"></div>
+<div class="login-container">
+    <form method="POST">
+        <label for="login">Login :</label>
+        <input type="text" id="login" name="login" required>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        <label>Vous êtes :</label>
+        <input type="radio" id="etudiant" name="role" value="etudiant" required>
+        <label for="etudiant">Étudiant</label>
+        <input type="radio" id="professeur" name="role" value="professeur" required>
+        <label for="professeur">Professeur</label>
+        <button type="submit">Connexion</button>
+    </form>
+</div>
+{% endblock %}
