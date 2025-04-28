@@ -55,7 +55,7 @@ Veuillez consulter le script [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blo
    
 
 ## Rapport du projet
-Le rapport détaillé du projet est disponible [ici](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/rapport.pdf).
+Le rapport détaillé du projet est disponible [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blob/master/Rapport_projet_web.pdf).
 
 ## Merci de visiter mon projet !
 Je vous remercie d'avoir pris le temps de visiter mon projet💙. N'hésitez pas à explorer les différentes fonctionnalités et à consulter le rapport pour plus de détails. Votre retour est toujours apprécié !
