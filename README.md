@@ -1,4 +1,4 @@
-# ISI1-WEB Projet Final 2024-20235
+# ISI1-WEB Projet Final 2024-2025
 
 ## Description du projet
 Cette application web est un projet final à réaliser en binôme pour le suivi des stages en entreprise. Elle s'appuie sur les technologies *PHP PDO*, *Bootstrap 5*, *Twig* et *MySQL*.  
@@ -26,22 +26,32 @@ Elle permet de gérer les interactions entre étudiants et entreprises proposant
 - *Twig*
 
 ## Maquettes de l'application
-Voici les maquettes de l'application, présentées dans l'ordre :
+Voici les maquettes de l'application, :
 
-1. **Maquette 1**  
-   ![Maquette 1](https://github.com/QALLOUJ/WEBAPPLICATION/blob/master/Maquettes-Ecran/accueilAppli.png)
-
-2. **Maquette 2**  
-   ![Maquette 2](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/capture2.png)
-
-3. **Maquette 3**  
-   ![Maquette 3](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/capture3.png)
-
-4. **Maquette 4**  
-   ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/capture4.png)
-
-5. **Page d'accueil de l'application**  
+1.**page de connexion** :permet aux utilisateurs (étudiants ou professeurs) d'accéder à l'application. L'authentification se fait à partir des mots de passe qui sont stockés dans la base de données MySQL. Les utilisateurs doivent entrer leur nom d'utilisateur et mot de passe pour se connecter.
+Veuillez consulter le script [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blob/master/chemin/vers/ton/script.php) pour voir comment la connexion est mise en place à l'aide de PHP et MySQL.
+   ![Page login](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/logAppli.png)
+2.**Page d'accueil de l'application**  
    ![Page d'accueil](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/accueilAppli.png)
+3. **Maquette 3**  
+   ![Maquette 3](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/pageaide.png)
+4. **Maquette 4**  
+   ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/listeEtudiantStage.png)
+5. **Maquette 5**  
+   ![Maquette 5](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/ficheEtudiant.png)
+6. **Maquette 6**  
+   ![Maquette 6](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueProf.png)
+7. **Maquette 7**  
+   ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueEtudiant.png)
+8. **Maquette 8**  
+   ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueDescription.png)
+9. **Maquette 9**  
+   ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueCreation.png)
+10. **Maquette 10**  
+   ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/descriptionStage.png)
+   
+
+   
 
 ## Rapport du projet
 Le rapport détaillé du projet est disponible [ici](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/rapport.pdf).
