@@ -1,12 +1,14 @@
 .list
 {
-    width: 100%;
+    width: 50%;
+    background-color: darkblue;
+    margin-left: 1000px;
 }
 
-.list table
+.list list
 {
-    width: 100%;
-    margin: 0px;
+    width: 50%;
+    
     padding: 0px;
 }
 
@@ -17,11 +19,11 @@
     
 }
 
-.list th
+.list td
 {
     text-decoration: none;
-    background-color: #3060FF;
-    border: 1px solid #183080;
+    background-color: darkblue;
+    border: 1px solid darkblue;
     color: white;
     margin: 0px;
     padding: 5px 12px 5px 12px;
@@ -32,10 +34,10 @@
 .list  th span
 {
     display: inline-block;
-    width: -moz-calc(100% - 18px);
-    width: -webkit-calc(100% - 18px);
-    width: -o-calc(100% - 18px);
-    width: calc(100% - 18px);
+    width: -moz-calc(50% - 18px);
+    width: -webkit-calc(50% - 18px);
+    width: -o-calc(50% - 18px);
+    width: calc(50% - 18px);
     text-align: center;
     
 }
@@ -44,17 +46,17 @@
 {
     text-align: center;
     text-decoration: none;
-    background-color: #2050C0;
+    background-color: darkblue;
     border-radius: 3px;
     color: white;
-    border: 1px solid #1840A0;
+    border: 1px solid darkblue;
     padding: 0px 4px 0px 4px;
     margin: 4px 4px 4px 4px;
 }
 
 .list  td
 {
-    background-color: #DDD;
+    background-color: darkblue;
     border: 1px solid #BBB;
     padding: 5px 5px 5px 5px;
     font-size: 0.85em;

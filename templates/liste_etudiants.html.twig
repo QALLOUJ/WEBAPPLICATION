@@ -2,6 +2,8 @@
 
 {% block content %}  
 
+<div class="container">
+
 <button class="large_bouton_operation" onclick="toggleForm()">
     <a>
         <img src="icons/rechercher.png" height = "20" weight = "20">
@@ -43,7 +45,7 @@
 <hr>
 <br>
 
-<table class= "list">
+<table>
     <tr>
         <th class ="list">Opération</td>
         {% if role == 'professeur' %}
@@ -90,6 +92,6 @@ function toggleForm() {
     }
 }
 </script>
-
+</diV>
 
 {% endblock %} 

@@ -21,8 +21,7 @@ try {
     
         // Traitement de la modification ici, par exemple une requête SQL pour mettre à jour les informations
     
-        // Afficher un message de succès après la modification
-        echo 'succes' . $num_entreprise . ' a été modifiée avec succès.';
+
     }
     // Récupérer les données de l'entreprise par son ID
     $num_entreprise = $_GET['num_entreprise'];
@@ -95,7 +94,7 @@ try {
         // Valider la transaction
         $pdo->commit();
 
-        echo "Entreprise mise à jour avec succès !";
+        
         header("Location: entreprise.php");
         exit;
     }

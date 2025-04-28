@@ -7,7 +7,8 @@ body {
 }
 h1{
     text-align: center;
-    color: #333;
+    color: white;
+    background-color: darkblue;
 }
 .sidebar {
     height: 100vh;
@@ -42,21 +43,14 @@ h1{
 }
 /* Conteneur principal */
 .container {
-    width: 1000px;
-    
+    width: 800px;
+    margin: 20px auto;
     
     border: 1px solid #ccc;
     padding: 20px;
-    margin-left: 200px;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
+
 
 label {
     font-weight: bold;
@@ -92,10 +86,11 @@ button:hover {
 }
 
 /* Table des résultats */
-table {
-    width: 100%;
+.table {
+    width: 50%;
     margin-top: 20px;
     border-collapse: collapse; /* Pour supprimer les espaces entre les bordures */
+    margin-left: 1000px;
 }
 
 
@@ -217,3 +212,93 @@ table tr:hover {
     height: 16px;
     margin-right: 8px; /* Espace entre l'icône et le texte */
 }
+
+
+.information
+{
+    background-color: #CCCCFF;
+    border: 1px solid #AAAADD;
+    border-radius: 5px;
+    padding: 0px 15px 15px 15px;
+    margin: 0px 10px 10px 0px;
+}
+
+.aide
+{
+    background-color: #CCFFCC;
+    border: 1px solid #AADDAA;
+    border-radius: 3px;
+    padding: 15px;
+    text-align: center;
+}
+/* ---------------------------------------------------------------------- */
+
+.section {
+    margin-bottom: 20px;
+}
+.section-header {
+    background-color: darkblue;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
+.section-content {
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+form {
+    width: 100%; /* occupe toute la largeur de la page */
+    width: 950px; /* optionnel : limite la largeur maximale */
+    margin: 0 auto; /* centre le formulaire horizontalement */
+    padding: 20px; /* espace interne */
+     /* couleur de fond douce */
+    border: 1px solid #ccc; /* bordure légère */
+    border-radius: 10px; /* coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ombrage */
+    margin-right: 50px;
+}
+.form-group {
+    display: flex;
+    margin-bottom: 10px;
+}
+.form-group label {
+    width: 200px;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea, .form-group select {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group input[type="url"] {
+    width: 100%;
+}
+.form-group textarea {
+    width: 100%;
+    height: 60px;
+}
+.form-group select {
+    width: 100%;
+    height: 100px;
+}
+.note {
+    background-color: #ccffcc;
+    padding: 10px;
+    text-align: center;
+}
+.submit-button {
+    text-align: center;
+}
+.submit-button button {
+    background-color:darkblue;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.submit-button button:hover {
+    background-color:darkblue;
+}
+
+
+

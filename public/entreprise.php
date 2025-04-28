@@ -330,7 +330,7 @@ try {
                 $numEntreprise = isset($row['num_entreprise']) ? $row['num_entreprise'] : null;
             
                 if ($role == 'professeur' && $numEntreprise !== null) {
-                    echo "<a href='inscrire.php?num_entreprise={$numEntreprise}' class='icon-link' title='Inscrire'>";
+                    echo "<a href='inscription.php?num_entreprise={$numEntreprise}' class='icon-link' title='Inscrire'>";
                     echo "<img src='icons/inscrire.png' alt='Inscrire'  class='image-container'>";
                     echo "</a>";
             
@@ -349,7 +349,7 @@ try {
                     echo "<a href='voir.php?num_entreprise={$numEntreprise}' class='icon-link' title='Voir'>";
                     echo "<img src='icons/voir.png' alt='Voir' class='image-container'>";
                     echo "</a>";
-                    echo "<a href='inscrire.php?num_entreprise={$numEntreprise}' class='icon-link' title='Inscrire'>";
+                    echo "<a href='inscription.php?num_entreprise={$numEntreprise}' class='icon-link' title='Inscrire'>";
                     echo "<img src='icons/inscrire.png' alt='Inscrire' class='image-container'>";
                     echo "</a>";
 
