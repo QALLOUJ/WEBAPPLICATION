@@ -29,7 +29,7 @@ Elle permet de gérer les interactions entre étudiants et entreprises proposant
 Voici les maquettes de l'application, :
 
 1.**page de connexion** :permet aux utilisateurs (étudiants ou professeurs) d'accéder à l'application. L'authentification se fait à partir des mots de passe qui sont stockés dans la base de données MySQL. Les utilisateurs doivent entrer leur nom d'utilisateur et mot de passe pour se connecter.
-Veuillez consulter le script [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blob/master/chemin/vers/ton/script.php) pour voir comment la connexion est mise en place à l'aide de PHP et MySQL.
+Veuillez consulter le script [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blob/master/geststages.sql) pour voir comment la connexion est mise en place à l'aide de PHP et MySQL.
    ![Page login](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/logAppli.png)
 2.**Page d'accueil de l'application**  
    ![Page d'accueil](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/accueilAppli.png)
