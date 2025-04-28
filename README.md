@@ -34,7 +34,7 @@ Veuillez consulter le script [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blo
 2.**Page d'accueil de l'application**  
    ![Page d'accueil](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/accueilAppli.png)
 3. **Maquette 3**  
-   ![Maquette 3](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/pageaide.png)
+   ![Maquette 3](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/pageAide.png)
 4. **Maquette 4**  
    ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/listeEtudiantStage.png)
 5. **Maquette 5**  
