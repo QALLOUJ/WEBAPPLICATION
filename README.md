@@ -40,9 +40,9 @@ Veuillez consulter le script [ici](https://github.com/QALLOUJ/WEBAPPLICATION/blo
    ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/listeEtudiantStage.png)
 5. **Maquette 5**  
    ![Maquette 5](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/ficheEtudiant.png)
-6. **Maquette 6**  
+6. **Maquette 6 (vueProf)**  
    ![Maquette 6](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueProf.png)
-7. **Maquette 7**  
+7. **Maquette 7 (vueEtudiant)**  
    ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueEtudiant.png)
 8. **Maquette 8**  
    ![Maquette 4](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/entreprise-vueDescription.png)
