@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {% if message %}
+        <div class="aide">{{ message }}</div>
+        {% set message = null %}
+    {% endif %}
+
+    {% if error %}
+        <div class="information">{{ error }}</div>
+        {% set error = null %}
+    {% endif %}
+
+    <form method="POST" action="inscription_form.php">
+        <div class="section">
+            <div class="section-header">Contact</div>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="entreprise">Entreprise<span style="color: red;">*</span> :</label>
+                    <select name="entreprise" id="entreprise" required>
+                        <option value="" disabled selected>Choisir une entreprise</option>
+                        {% for entreprise in entreprises %}
+                            <option value="{{ entreprise.num_entreprise }}">
+                                {{ entreprise.raison_sociale }} - Contact : {{ entreprise.nom_contact }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="etudiant">Étudiant<span style="color: red;">*</span> :</label>
+                    <select name="etudiant" id="etudiant" required>
+                        <option value="" disabled selected>Choisir un étudiant</option>
+                        {% for etudiant in etudiants %}
+                            <option value="{{ etudiant.num_etudiant }}">
+                                {{ etudiant.prenom_etudiant }} {{ etudiant.nom_etudiant }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="professeur">Professeur<span style="color: red;">*</span> :</label>
+                    <select name="professeur" id="professeur" required>
+                        <option value="" disabled selected>Choisir un professeur</option>
+                        {% for professeur in professeurs %}
+                            <option value="{{ professeur.num_professeur }}">
+                                {{ professeur.prenom_prof }} {{ professeur.nom_prof }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Description du stage</div>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="debut_stage">Date de début du stage<span style="color: red;">*</span> :</label>
+                    <input type="date" id="debut_stage" name="debut_stage" required>
+                </div>
+                <div class="form-group">
+                    <label for="fin_stage">Date de fin du stage<span style="color: red;">*</span> :</label>
+                    <input type="date" id="fin_stage" name="fin_stage" required>
+                </div>
+                <div class="form-group">
+                    <label for="type_stage">Type de stage<span style="color: red;">*</span> :</label>
+                    <select name="type_stage" id="type_stage" required>
+                        <option value="" disabled selected>Choisir un type de stage</option>
+                        {% for stage in typesStage %}
+                            <option value="{{ stage }}">{{ stage }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="desc_projet">Description du projet :</label>
+                    <textarea id="desc_projet" name="desc_projet" rows="5" placeholder="Écrivez votre texte ici..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="observation">Observation :</label>
+                    <textarea id="observation" name="observation" rows="5" placeholder="Écrivez votre texte ici..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            Les champs comportant le symbole <span style="color: red;">*</span> sont obligatoires.
+        </div>
+        <div class="button-container">
+            <button type="submit">Inscrire</button>
+        </div>
+    </form>
+{% endblock %}

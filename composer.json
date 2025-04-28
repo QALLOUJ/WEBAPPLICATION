@@ -1,0 +1,17 @@
+{
+    "name": "qalloujpadayodi/projetappliisiweb",
+    "description": "Application pour ISI Web",
+    "autoload": {
+        "psr-4": {
+            "Qalloujpadayodi\\Projetappliisiweb\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "qalloujpadayodi"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

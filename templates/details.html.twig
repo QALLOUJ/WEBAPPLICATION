@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div>
+    <h1>Détails pour le stagiaire {{ user.prenom_etudiant }} {{ user.nom_etudiant }}</h1>
+
+    <table class="list">
+        <tr>
+            <th>Numéro de stage</th>
+            <td>{{ user.num_stage }}</td>
+        </tr>
+        <tr>
+            <th>Début du stage</th>
+            <td>{{ user.debut_stage }}</td>
+        </tr>
+        <tr>
+            <th>Fin du stage</th>
+            <td>{{ user.fin_stage }}</td>
+        </tr>
+        <tr>
+            <th>Type de stage</th>
+            <td>{{ user.type_stage }}</td>
+        </tr>
+        <tr>
+            <th>Description du projet</th>
+            <td>{{ user.desc_projet }}</td>
+        </tr>
+        <tr>
+            <th>Observation du stage</th>
+            <td>{{ user.observation_stage }}</td>
+        </tr>
+        <tr>
+            <th>Numéro étudiant</th>
+            <td>{{ user.num_etudiant }}</td>
+        </tr>
+        <tr>
+            <th>Nom étudiant</th>
+            <td>{{ user.nom_etudiant }}</td>
+        </tr>
+        <tr>
+            <th>Prénom étudiant</th>
+            <td>{{ user.prenom_etudiant }}</td>
+        </tr>
+        <tr>
+            <th>Année d'obtention</th>
+            <td>{{ user.annee_obtention }}</td>
+        </tr>
+        <tr>
+            <th>Login</th>
+            <td>{{ user.login }}</td>
+        </tr>
+        <tr>
+            <th>Numéro de classe</th>
+            <td>{{ user.num_classe }}</td>
+        </tr>
+        <tr>
+            <th>En activité</th>
+            <td>{{ user.en_activite ? 'Oui' : 'Non' }}</td>
+        </tr>
+    </table>
+
+    <button class="large_bouton_operation"><a href="liste_etudiants.php">Retour à la liste des étudiants</a></button>
+</div>
+{% endblock %}

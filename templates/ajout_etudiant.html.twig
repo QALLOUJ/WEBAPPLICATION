@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}  
+<table class= "list">
+    <tr>
+        <th class ="list" colspan="2">Informations concernant l'étudiant</td>
+    </tr>
+    <tr>
+        <td>Nom<span style="color: red;">*</span> :</td>
+        <td>
+            <form action="/path/to/traitement.php" method="POST">
+                <input type="text" id="nom" name="nom">
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Prénom<span style="color: red;">*</span> :</td>
+        <td>
+            <form action="/path/to/traitement.php" method="POST">
+                <input type="text" id="prenom" name="prenom">
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Nom d'utilisateur (8 caractères)<span style="color: red;">*</span> :</td>
+        <td>
+            <form action="/path/to/traitement.php" method="POST">
+                <input type="text" id="nom_utilisateur" name="nom_utilisateur" minlenght ="8" maxlenght ="8" >
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Mot de passe (entre 8 et 30 caractères)<span style="color: red;">*</span> :</td>
+        <td>
+            <form action="/path/to/traitement.php" method="POST">
+                <input type="text" id="mdp" name="mdp" minlenght ="8" maxlenght ="30" >
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Date d'obtention du BTS (AAAA-MM-JJ) :</td>
+        <td>
+            <form method="POST">
+                <input type="date" id="date" name="date">
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Classe<span style="color: red;">*</span> :</td>
+        <td>
+            <select name="classe" id="classe">
+            {% for classe in classes %}
+                <option value="{{ classe.id }}">{{ classe.nom_classe}}</option>
+            {% endfor %}
+            </select>
+        </td>
+    </tr>
+</table>
+<p></p>
+<p class ="aide"> Les champs comportant le symbole <span style="color: red;">*</span> sont obligatoires.</p>
+
+<button class="large_bouton_operation"><a>Ajouter</a></button> 
+
+{% endblock %}
