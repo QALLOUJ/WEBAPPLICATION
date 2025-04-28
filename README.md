@@ -29,7 +29,7 @@ Elle permet de gérer les interactions entre étudiants et entreprises proposant
 Voici les maquettes de l'application, présentées dans l'ordre :
 
 1. **Maquette 1**  
-   ![Maquette 1](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/capture1.png)
+   ![Maquette 1](https://github.com/QALLOUJ/WEBAPPLICATION/blob/master/Maquettes-Ecran/accueilAppli.png)
 
 2. **Maquette 2**  
    ![Maquette 2](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/capture2.png)
@@ -47,4 +47,4 @@ Voici les maquettes de l'application, présentées dans l'ordre :
 Le rapport détaillé du projet est disponible [ici](https://github.com/QALLOUJ/WEBAPPLICATION/raw/master/Maquettes-Ecran/rapport.pdf).
 
 ## Merci de visiter mon projet !
-Je vous remercie d'avoir pris le temps de visiter mon projet. N'hésitez pas à explorer les différentes fonctionnalités et à consulter le rapport pour plus de détails. Votre retour est toujours apprécié !
+Je vous remercie d'avoir pris le temps de visiter mon projet💙. N'hésitez pas à explorer les différentes fonctionnalités et à consulter le rapport pour plus de détails. Votre retour est toujours apprécié !
